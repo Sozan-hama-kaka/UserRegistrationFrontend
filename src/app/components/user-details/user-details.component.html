@@ -39,8 +39,8 @@
     </mat-error>
   </mat-form-field><br>
   <mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email">
+    <mat-label>Email (Optional)</mat-label>
+    <input matInput formControlName="email" placeholder="john@example.com">
     <mat-error *ngIf="userDetails.get('email')?.hasError('email') && userDetails.get('email')?.touched">
       Please enter a valid email
     </mat-error>
