@@ -60,7 +60,7 @@ export class SummaryComponent implements OnInit {
             alert('An error occurred: ' + error.error.message);
           } else {
             // Server-side error
-            alert('Server error: ' + error.status + ' - ' + error.error);
+            // alert('Server error: ' + error.status + ' - ' + error.error);
             if (error.error.errors) {
               alert('Validation errors: ' + error.error.errors.join(', '));
             }
