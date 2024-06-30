@@ -20,7 +20,7 @@ export class UserDetailsComponent implements OnInit {
         loginName: ['', Validators.required],
         password: ['', Validators.required],
         passwordConfirm: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]]
+        email: ['', Validators.email]
       }, { validators: passwordMatchValidator }));
     }
   }
