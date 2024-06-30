@@ -1,0 +1,21 @@
+<form [formGroup]="approvalDetails" (ngSubmit)="onSubmit()">
+  <h3>Company Details</h3>
+  <p>Company Name: {{ parentForm.get('companyDetails.companyName')?.value }}</p>
+  <p>Industry: {{ getIndustryName(parentForm.get('companyDetails.industryId')?.value) }}</p>
+  <p>Name: {{ parentForm.get('userDetails.name')?.value }}</p>
+  <p>First Name: {{ parentForm.get('userDetails.firstName')?.value }}</p>
+  <p>Login: {{ parentForm.get('userDetails.loginName')?.value }}</p>
+  <p>Email: {{ parentForm.get('userDetails.email')?.value }}</p>
+
+  <mat-checkbox formControlName="termsOfService" required>
+    I approve the terms of service
+  </mat-checkbox><br>
+  <mat-checkbox formControlName="privacyPolicy" required>
+    I approve the privacy policy
+  </mat-checkbox><br>
+  <div>
+    <button mat-raised-button color="primary" matStepperPrevious>Previous</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="approvalDetails.invalid">Submit</button>
+    <button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button>
+  </div>
+</form>

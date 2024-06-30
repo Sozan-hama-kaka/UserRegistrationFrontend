@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title {
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  background-color: #cdc4d5 !important;
+  padding: 10px !important;
+}
+
+.title-text {
+  color: #007bff !important;
+}
+
+.wrapper{
+  width: 80% !important;
+  margin: 0 auto !important;
+}
+.mat-stepper-horizontal {
+  margin-top: 8px !important;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px !important;
+}
+button{
+  border-radius: 0 !important;
+  margin: 0 10px !important;
+}

@@ -1,0 +1,23 @@
+<form [formGroup]="companyDetails">
+  <mat-form-field class="example-full-width">
+    <mat-label>Company Name</mat-label>
+    <input matInput formControlName="companyName" required>
+    <mat-error *ngIf="companyDetails.get('companyName')?.hasError('required')">
+      Company Name is required
+    </mat-error>
+  </mat-form-field><br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Industry</mat-label>
+    <mat-select formControlName="industryId" required>
+      <mat-option *ngFor="let industry of industries" [value]="industry.id">
+        {{ industry.name }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="companyDetails.get('industryId')?.hasError('required')">
+      Industry is required
+    </mat-error>
+  </mat-form-field><br>
+  <div>
+    <button mat-raised-button color="primary" matStepperNext [disabled]="companyDetails.invalid">Next</button>
+  </div>
+</form>

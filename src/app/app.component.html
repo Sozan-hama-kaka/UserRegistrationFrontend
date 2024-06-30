@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <div class="title">
+    <h2 class="title-text">User Registration System</h2>
+  </div>
+  <mat-stepper #stepper labelPosition="bottom" linear>
+    <mat-step label="Company Details" [stepControl]="mainForm.get('companyDetails')!">
+      <app-company-details [parentForm]="mainForm"></app-company-details>
+    </mat-step>
+
+    <mat-step label="User Details" [stepControl]="mainForm.get('userDetails')!">
+      <app-user-details [parentForm]="mainForm"></app-user-details>
+    </mat-step>
+
+    <mat-step label="Summary" [stepControl]="mainForm.get('approvalDetails')!">
+      <app-summary [parentForm]="mainForm" (reset)="resetForm()"></app-summary>
+    </mat-step>
+  </mat-stepper>
+</div>
+
