@@ -33,10 +33,11 @@
     <mat-error *ngIf="userDetails.get('passwordConfirm')?.hasError('required')">
       Password confirmation is required
     </mat-error>
-  </mat-form-field>
-  <mat-error *ngIf="userDetails.errors?.['passwordMismatch']">
-    Passwords do not match.
-  </mat-error><br>
+    <!-- Display error if passwords do not match -->
+    <mat-error *ngIf="userDetails.get('passwordConfirm')?.hasError('passwordMismatch') && (userDetails.get('passwordConfirm')?.dirty || userDetails.get('passwordConfirm')?.touched)">
+      Passwords do not match.
+    </mat-error>
+  </mat-form-field><br>
   <mat-form-field class="example-full-width">
     <mat-label>Email</mat-label>
     <input matInput formControlName="email">
@@ -44,8 +45,9 @@
       Please enter a valid email
     </mat-error>
   </mat-form-field><br>
+  <!-- Next and Previous Buttons -->
   <div>
-    <button mat-raised-button color="primary" matStepperPrevious>Previous</button>
-    <button mat-raised-button color="primary" matStepperNext [disabled]="userDetails.invalid">Next</button>
+    <button mat-raised-button color="primary" type="button" matStepperPrevious>Previous</button>
+    <button mat-raised-button color="primary" type="button" matStepperNext [disabled]="userDetails.invalid">Next</button>
   </div>
 </form>
