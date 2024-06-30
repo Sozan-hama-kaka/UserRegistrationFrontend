@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { RegistrationService } from '../../services/user-registration.service'; // Adjust the path based on your project structure
-import { UserRegistration } from '../../models/user-registration.model'; 
+import { UserRegistration } from '../../models/user-registration.model';
 
 @Component({
   selector: 'app-summary',
@@ -12,7 +12,7 @@ import { UserRegistration } from '../../models/user-registration.model';
 export class SummaryComponent implements OnInit {
   @Input() parentForm!: FormGroup;
   @Output() reset = new EventEmitter<void>();
-  
+
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
