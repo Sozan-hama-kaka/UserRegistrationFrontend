@@ -1,9 +1,9 @@
 <form [formGroup]="approvalDetails" (ngSubmit)="onSubmit()">
   <p>Company Name: {{ parentForm.get('companyDetails.companyName')?.value }}</p>
   <p>Industry: {{ getIndustryName(parentForm.get('companyDetails.industryId')?.value) }}</p>
-  <p>Name: {{ parentForm.get('userDetails.name')?.value }}</p>
+  <p>Last Name: {{ parentForm.get('userDetails.name')?.value }}</p>
   <p>First Name: {{ parentForm.get('userDetails.firstName')?.value }}</p>
-  <p>Login: {{ parentForm.get('userDetails.loginName')?.value }}</p>
+  <p>Login Name: {{ parentForm.get('userDetails.loginName')?.value }}</p>
   <p>Email: {{ parentForm.get('userDetails.email')?.value }}</p>
 
   <mat-checkbox formControlName="termsOfService" required>
