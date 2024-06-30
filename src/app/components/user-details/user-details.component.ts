@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { passwordMatchValidator } from './validators';
+
 
 @Component({
   selector: 'app-user-details',
@@ -21,7 +21,7 @@ export class UserDetailsComponent implements OnInit {
         password: ['', Validators.required],
         passwordConfirm: ['', Validators.required],
         email: ['', Validators.email]
-      }, { validators: passwordMatchValidator }));
+      }));
     }
   }
 
