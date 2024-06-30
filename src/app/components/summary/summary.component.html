@@ -1,5 +1,4 @@
 <form [formGroup]="approvalDetails" (ngSubmit)="onSubmit()">
-  <h3>Company Details</h3>
   <p>Company Name: {{ parentForm.get('companyDetails.companyName')?.value }}</p>
   <p>Industry: {{ getIndustryName(parentForm.get('companyDetails.industryId')?.value) }}</p>
   <p>Name: {{ parentForm.get('userDetails.name')?.value }}</p>

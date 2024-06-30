@@ -5,7 +5,7 @@
     <mat-error *ngIf="userDetails.get('name')?.hasError('required')">
       Name is required
     </mat-error>
-  </mat-form-field><br>
+  </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>First Name</mat-label>
     <input matInput formControlName="firstName" required>
@@ -19,7 +19,7 @@
     <mat-error *ngIf="userDetails.get('loginName')?.hasError('required')">
       Login Name is required
     </mat-error>
-  </mat-form-field><br>
+  </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Password</mat-label>
     <input matInput type="password" min="6" formControlName="password" required>
@@ -41,7 +41,7 @@
     <mat-error *ngIf="userDetails.get('passwordConfirm')?.hasError('passwordMismatch') && (userDetails.get('passwordConfirm')?.dirty || userDetails.get('passwordConfirm')?.touched)">
       Passwords do not match.
     </mat-error>
-  </mat-form-field><br>
+  </mat-form-field>
   <mat-form-field class="example-full-width">
     <mat-label>Email (Optional)</mat-label>
     <input matInput formControlName="email" placeholder="john@example.com">

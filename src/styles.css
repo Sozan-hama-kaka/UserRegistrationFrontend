@@ -24,7 +24,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-mdc-form-field {
   margin-top: 16px !important;
-  width: 250px !important;
+  width: 25% !important;
+  margin-left: 5px !important;
 }
 button{
   border-radius: 0 !important;
