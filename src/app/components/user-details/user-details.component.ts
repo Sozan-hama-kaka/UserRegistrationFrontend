@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { PasswordInfoDialogComponent } from '../password-info-dialog/password-info-dialog.component';
 
 @Component({
   selector: 'app-user-details',
@@ -9,7 +11,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from
 export class UserDetailsComponent implements OnInit {
   @Input() parentForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private dialog: MatDialog) {}
 
   ngOnInit() {
     if (!this.parentForm.get('userDetails')) {
@@ -62,5 +64,9 @@ export class UserDetailsComponent implements OnInit {
 
   get userDetails(): FormGroup {
     return this.parentForm.get('userDetails') as FormGroup;
+  }
+
+  openPasswordInfoDialog(): void {
+    this.dialog.open(PasswordInfoDialogComponent, { panelClass: 'custom-dialog-container' });
   }
 }

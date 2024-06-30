@@ -1,0 +1,19 @@
+/* Additional Example styles for better padding and spacing */
+.mat-form-field {
+  position: relative !important;
+  margin-bottom: 16px !important; /* Adds spacing below each form field */
+}
+
+button[matSuffix] {
+  position: absolute !important;
+  top: 50% !important;
+  right: 16px !important; /* Increased right padding */
+  transform: translateY(-50%) !important;
+}
+
+/* Optional: Style for the password info dialog */
+.app-password-info-dialog {
+  max-width: 400px !important; /* Adjust dialog width as needed */
+  padding: 24px !important;
+  text-align: left !important; /* Ensures text is aligned properly */
+}

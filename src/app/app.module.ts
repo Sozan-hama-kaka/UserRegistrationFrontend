@@ -17,6 +17,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CompanyDetailsComponent } from './components/company-details/company-details.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { PasswordInfoDialogComponent } from './components/password-info-dialog/password-info-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatIcon} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { SummaryComponent } from './components/summary/summary.component';
     CompanyDetailsComponent,
     UserDetailsComponent,
     SummaryComponent,
+    PasswordInfoDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { SummaryComponent } from './components/summary/summary.component';
     MatSelectModule,
     MatOptionModule,
     MatCheckboxModule,
-    HttpClientModule, 
+    HttpClientModule,
+    MatDialogModule,
+    MatIcon,
   ],
   providers: [],
   bootstrap: [AppComponent]

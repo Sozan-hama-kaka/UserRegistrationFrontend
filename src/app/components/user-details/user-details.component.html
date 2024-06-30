@@ -22,7 +22,11 @@
   </mat-form-field><br>
   <mat-form-field class="example-full-width">
     <mat-label>Password</mat-label>
-    <input matInput type="password" formControlName="password" required>
+    <input matInput type="password" min="6" formControlName="password" required>
+    <!-- Info icon button -->
+    <button mat-icon-button matSuffix aria-label="Info" (click)="openPasswordInfoDialog()">
+      <mat-icon>info</mat-icon>
+    </button>
     <mat-error *ngIf="userDetails.get('password')?.hasError('required')">
       Password is required
     </mat-error>
